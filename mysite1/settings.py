@@ -110,6 +110,8 @@ TIME_ZONE = 'NZ'
 
 USE_I18N = True
 
+LOGIN_REDIRECT_URL = '/'
+
 USE_L10N = True
 
 USE_TZ = True

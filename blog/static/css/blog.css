@@ -1,7 +1,15 @@
 .page-header {
-    background-color: #ff9400;
+    background-color: #008B8B;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
+}
+
+div.page-header{
+    background-image: url("https://www.freewebheaders.com/wordpress/wp-content/gallery/corks-headers/wine-bottle-cork-covers-blog-header.jpg");
+}
+
+.navbar-default {
+    background-color: #008B8B;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
