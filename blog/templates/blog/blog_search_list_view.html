@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <h2> Searching for: {{ search_term }}</h2>
+     <hr>
+    {% if not posts %}
+        <p>Sorry we couldn't find what you were searching for</p>
+    {% else %}
+        {% for post in posts %}
+            <div class="post">
+                <div class="date">
+                    <p>published: {{ post.published_date }}</p>
+                </div>
+                <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

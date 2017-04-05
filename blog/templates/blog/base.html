@@ -13,6 +13,7 @@
     {% if user.is_authenticated %}
         <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
         <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+        <a href="{% url 'add_images' %}" class="top-menu"><span class="glyphicon glyphicon-camera"></span></a>
         <p class="top-menu">Hello {{ user.username }}
             <small>(<a href="{% url 'logout' %}">Log out</a>)</small>
         </p>
@@ -26,11 +27,12 @@
             <li><a href="#">About</a></li>
         </ul>
         <div class="col-sm-3 col-md-3 pull-right">
-            <form class="navbar-form" role="search">
+            <form id="searchform" action="{% url 'blog_search_list_view' %}" method="get" accept-charset="utf-8">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                    <input type="text" class="form-control" name="search_term" placeholder="Search">
                     <div class="input-group-btn">
-                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i>
+                        <button class="btn btn-default" type="submit">
+                            <span  class="glyphicon glyphicon-search" aria-hidden="true"></span>
                         </button>
                     </div>
                 </div>

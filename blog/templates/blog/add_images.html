@@ -1,0 +1,26 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <h1>Add Image</h1>
+    <div>
+         <form enctype="multipart/form-data" method="POST" class="post-form">{% csrf_token %}
+            {{ image_form.as_p }}
+            <input type="submit" value="Save" name="save" class="save btn btn-default"/>
+        </form>
+    </div>
+    <br>
+    <hr>
+    <h2> Currently uploaded:</h2>
+    <div>
+        <form method="POST" class="post-form">{% csrf_token %}
+             {% for image in images %}
+                <div>
+                    <input type="checkbox" name="select_image" value="{{ image.id }}"/><img src="{{ image.image.url }}" width="150" height="200" >
+                    <p>{{ image.name }}</p>
+                </div>
+            {% endfor %}
+           <input type="submit" value="Delete" name="delete"/>
+        </form>
+    </div>
+    <br>
+{% endblock %}
