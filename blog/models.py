@@ -1,5 +1,4 @@
 import markdown
-import re
 
 from django.db import models
 from django.utils import timezone
@@ -25,12 +24,19 @@ class Image(models.Model):
         return markdown_to_html(self.text, self.images.all())
 
 
+class Tag(models.Model):
+    name = models.CharField(max_length=400, default="")
+
+    def __str__(self):
+        return self.name
+
+
 class Post(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
     images = models.ManyToManyField(Image, blank=True)
     text = models.TextField()
-    tags = models.CharField(max_length=400, default="")
+    tags = models.ManyToManyField(Tag, blank=True)
     created_date = models.DateTimeField(
         default=timezone.now)
     published_date = models.DateTimeField(

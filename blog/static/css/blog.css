@@ -1,14 +1,10 @@
 .page-header {
     margin-top: 0;
-    padding: 20px 20px 20px 40px;
-}
-
-div.page-header{
-    background-image: url("https://www.freewebheaders.com/wordpress/wp-content/gallery/corks-headers/wine-bottle-cork-covers-blog-header.jpg");
+    padding: 10px 20px 1px 20px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
+    color: black;
     font-size: 36pt;
     text-decoration: none;
 }
@@ -34,7 +30,7 @@ h1, h2, h3, h4 {
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
+    color: black;
     float: right;
     font-size: 26pt;
     margin-right: 20px;

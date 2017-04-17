@@ -17,8 +17,8 @@
         {% endif %}
         <h1>{{ post.title }}</h1>
         {{ post.body_html|safe }}
-        {%  for tag in tags %}
-            <a href="{% url 'blog_search_list_view' %}?tag={{ tag }}">#{{ tag }}</a>
+        {%  for tag in post.tags.all %}
+            <a href="{% url 'blog_search_list_view' %}?tag={{ tag.pk }}">#{{ tag }}</a>
         {% endfor %}
     </div>
     <hr>
