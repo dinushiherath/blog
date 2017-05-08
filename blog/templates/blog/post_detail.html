@@ -16,7 +16,7 @@
                     class="glyphicon glyphicon-remove"></span></a>
         {% endif %}
         <h1>{{ post.title }}</h1>
-        {{ post.body_html|safe }}
+             {{ post.body_html|safe }}
         {%  for tag in post.tags.all %}
             <a href="{% url 'blog_search_list_view' %}?tag={{ tag.pk }}">#{{ tag }}</a>
         {% endfor %}

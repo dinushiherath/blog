@@ -3,6 +3,25 @@
     padding: 10px 20px 1px 20px;
 }
 
+.date-outer, #date-header {
+    text-align: center !important;
+    height: 8px;
+    font: 200 normal 12px Maven Pro;
+    font-size: 13px;
+    font-weight: 200;
+    width: 130px;
+    margin: 0 auto;
+    letter-spacing: 3px;
+    background-color: white;
+}
+
+.date-outer{
+    text-align: center !important;
+    border-bottom: 1px solid;
+    border-bottom-color: dimgray;
+    width: 350px;
+    margin: 0 auto;
+}
 
 #search{
     padding-right: 15px;
@@ -16,6 +35,10 @@
 
 .content {
     margin-left: 40px;
+}
+
+#content_main{
+    padding-left: 100px;
 }
 
 .glyphicon{
@@ -36,9 +59,10 @@
     padding-top: 5px;
 }
 
-/*h1, h2, h3, h4 {*/
-    /*font-family: 'Lobster', cursive;*/
-/*}*/
+h1, h2, h3, h4 {
+    font-family: Monaco;
+}
+
 
 .date {
     color: #828282;
